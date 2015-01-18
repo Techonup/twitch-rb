@@ -121,7 +121,7 @@ class Twitch
 
 	def getStreams(options = {})
 		query = buildQueryString(options)
-		path = "/streams"
+		path = "/streams?limit=10"
 		url =  @base_url + path + query
 		get(url)
 	end
@@ -193,6 +193,14 @@ class Twitch
     get(url)
   end
 
+    # custom
+    
+    def getAllFollows(username)
+        path = "/users/#{username}/follows/channels?limit=100"
+        url = @base_url + path
+        get(url)
+    end
+    
 	private
 	def buildQueryString(options)
 		query = "?"
@@ -215,7 +223,7 @@ class Twitch
 		{:body => c, :response => c.code}
 	end
 
-	def put(url, data={})
+	def put(url, data)
 		c = HTTParty.put(url, :body => data, :headers => {
 				'Accept' => 'application/json',
 				'Content-Type' => 'application/json',
