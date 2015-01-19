@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'twitch'
-  s.version     = '0.0.4'
+  s.version     = '0.0.5'
   s.date        = Date.today.to_s
   s.summary     = "Twitch API"
   s.description = "Simplify Twitch's API for Ruby"
