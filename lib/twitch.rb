@@ -108,12 +108,6 @@ class Twitch
 	# Streams
 
 	def getStream(stream_name)
-		path = "/stream/#{stream_name}"
-		url = @base_url + path;
-		get(url)
-	end
-
-	def getStream(stream_name)
 		path = "/streams/#{stream_name}"
 		url = @base_url + path;
 		get(url)
