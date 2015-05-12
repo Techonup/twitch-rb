@@ -188,13 +188,19 @@ class Twitch
   end
 
     # custom
-    
+
     def getAllFollows(username)
         path = "/users/#{username}/follows/channels?limit=100"
         url = @base_url + path
         get(url)
     end
-    
+
+		def getAllFollowing(username)
+			path = "/channels/#{username}/follows?limit=100"
+			url = @base_url + path
+			get(url)
+		end
+
 	private
 	def buildQueryString(options)
 		query = "?"

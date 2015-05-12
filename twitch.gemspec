@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'twitch'
-  s.version     = '0.0.5'
+  s.version     = '0.0.6'
   s.date        = Date.today.to_s
   s.summary     = "Twitch API"
   s.description = "Simplify Twitch's API for Ruby"
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.files       = ["lib/twitch.rb"]
   s.require_paths = ["lib"]
-  
+
   s.add_dependency('httparty')
   s.add_dependency('json')
   s.add_development_dependency('rspec')
